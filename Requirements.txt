@@ -21,3 +21,4 @@ Non-Functional Requirements
 2. Quick response time 
 3. The ability to store large amounts of data
 4. Security/privacy for patient health records and personal information
+5. Program must be written in JavaFX and MySQL
