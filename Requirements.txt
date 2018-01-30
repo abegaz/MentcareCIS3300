@@ -10,6 +10,7 @@ functional frequirements
 9. A notification system that alerts when a certain medical treatment is needed for patients
 10. Add new patients to the system
 11. Delete patients from the system
+12. filters through categories that sort time/type of medication a patient takes
 
 Non-functional requirements
 1. Interface that is uer-friendly; Easy to navigate and functional
