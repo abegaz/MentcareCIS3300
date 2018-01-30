@@ -1,7 +1,7 @@
 functional frequirements
 1. Update/Modify Patient Information
 2. Backup data automatically
-3. 
+3. Separate authorization levels for different users
 4. 
 5. 
 6. 
