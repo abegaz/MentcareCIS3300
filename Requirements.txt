@@ -12,3 +12,4 @@ functional frequirements
 
 non-functional requirements
 Interface that is uer-friendly; Easy to navigate and functional
+Quick response time 
