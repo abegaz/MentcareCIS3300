@@ -1,5 +1,11 @@
 functional frequirements
 Update/Modify Patient Information
+Backup data automatically
+
+
+
+
+
 
 non-functional requirements
 Interface that is uer-friendly; Easy to navigate and functional
