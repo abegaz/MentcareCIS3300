@@ -4,7 +4,7 @@ functional frequirements
 3. Separate authorization levels for different users
 4. Automatically export information into medical forms
 5. User feedback
-6. 
+6. A function to recover a lost password
 7. 
 8. 
 
