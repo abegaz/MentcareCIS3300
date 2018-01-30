@@ -17,7 +17,7 @@ Functional Requirements
 
 
 Non-Functional Requirements
-1. Interface that is uer-friendly; Easy to navigate and functional
+1. Interface that is user-friendly; Easy to navigate and functional
 2. Quick response time 
 3. The ability to store large amounts of data
 4. Security/privacy for patient health records and personal information
