@@ -1,4 +1,4 @@
-functional frequirements
+Functional Requirements
 1. Update/Modify Patient Information
 2. Backup data automatically
 3. Separate authorization levels for different users
@@ -16,7 +16,7 @@ functional frequirements
 15. Drop-down list for certain information that may be repeated for multiple patients
 
 
-Non-functional requirements
+Non-Functional Requirements
 1. Interface that is uer-friendly; Easy to navigate and functional
 2. Quick response time 
 3. The ability to store large amounts of data
