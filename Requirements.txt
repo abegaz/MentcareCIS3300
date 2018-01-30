@@ -1,3 +1,5 @@
 functional frequirements
+Update/Modify Patient Information
 
 non-functional requirements
+Interface that is uer-friendly; Easy to navigate and functional
