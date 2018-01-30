@@ -5,7 +5,7 @@ functional frequirements
 4. Automatically export information into medical forms
 5. User feedback
 6. A function to recover a lost password
-7. 
+7. The ability to access and share previous patient records
 8. 
 
 
