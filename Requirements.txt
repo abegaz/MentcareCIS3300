@@ -13,7 +13,7 @@ functional frequirements
 12. filters through categories that sort time/type of medication a patient takes
 13. Lower-level access users can request to edit/delete information from a higher-access user
 14. Patient needs the ability to contact their physcicians/ physicatrists through metacare
-
+15. Drop-down list for certain information that may be repeated for multiple patients
 Non-functional requirements
 1. Interface that is uer-friendly; Easy to navigate and functional
 2. Quick response time 
