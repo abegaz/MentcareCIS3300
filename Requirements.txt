@@ -14,3 +14,4 @@ non-functional requirements
 Interface that is uer-friendly; Easy to navigate and functional
 Quick response time 
 The ability to store large amounts of data
+Security/privacy for patient health records and personal information
