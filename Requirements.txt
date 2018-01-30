@@ -8,11 +8,11 @@ functional frequirements
 7. The ability to access and share previous patient records
 8. Comply with HIPAA guidelines governing patient information
 9. A notification system that alerts when a certain medical treatment is needed for patients
-Add new patients to the system
-Delete patients from the system
+10. Add new patients to the system
+11. Delete patients from the system
 
-non-functional requirements
-Interface that is uer-friendly; Easy to navigate and functional
-Quick response time 
-The ability to store large amounts of data
-Security/privacy for patient health records and personal information
+Non-functional requirements
+1. Interface that is uer-friendly; Easy to navigate and functional
+2. Quick response time 
+3. The ability to store large amounts of data
+4. Security/privacy for patient health records and personal information
