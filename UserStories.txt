@@ -1,3 +1,8 @@
 Functional Requirement User Stories
 
 Non-Functional Requirement User Stories
+1. As a Patient/Physician I want to be able to easily navigate and understand the software.
+2. As a Patient/Physician I want the system to react quickly so I can be efficient with my time.
+3. As a Developer I want to have the ability to keep the information in one place so I don't have to connect more databases.
+4. As a Patient I want my medical and personal information to be safe and secure.
+5. As a Developer I want to use coding languages that make it easy to edit my program and store information.
