@@ -1,4 +1,19 @@
 Functional Requirement User Stories
+1.
+2.
+3.
+4. As a Healthcare Provider/Physician I would like easy transferbility of raw medical record data into medical forms and a system-wide datsbase.
+5. As a Patient/Physician I want the system to have a portal for patients and doctors alike to be able to provide feedback on pitfalls and praises of the system.
+6. As a Patient/Physician I want the system to have the ability to recover and reset a password if necessary, with ease.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
 
 Non-Functional Requirement User Stories
 1. As a Patient/Physician I want to be able to easily navigate and understand the software.
