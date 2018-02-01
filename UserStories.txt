@@ -9,8 +9,8 @@ Functional Requirement User Stories
 8. As a Physician I want the insurance that all patient information complies with HIPAA guidelines.
 9. As a Patient/Physician I want to be alerted when a speific medical treatment is required for any patient.
 10. As a Physician I want to have the ability to add new patients to the system.
-11.
-12.
+11. As a Physician I want to be able to remove patients from the system.
+12. As a Physician I want to be able to filter and sort through catagories of a patient's medicine by type and time.
 13. As a Supervisor I want the system to require my approval when a lower-level user edits or deleted information.
 14. As a Patient I want the system to connect to my Physician/Psychiastrist.
 15. As a Healthcare Provider/Physician I want the system to drop-down a list for certain information shared by multiple patients.
