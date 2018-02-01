@@ -1,7 +1,7 @@
 Functional Requirement User Stories
-1.
-2.
-3.
+1.As a Physician/Patient I would like the ability to easily update/modify patient information.
+2.As a Patient/Physician I would like to be able to backup all my data automatically.
+3.As a Physician I would like to have seoerate authorization levels for different users to protect people's privacy.
 4. As a Healthcare Provider/Physician I would like easy transferbility of raw medical record data into medical forms and a system-wide datsbase.
 5. As a Patient/Physician I want the system to have a portal for patients and doctors alike to be able to provide feedback on pitfalls and praises of the system.
 6. As a Patient/Physician I want the system to have the ability to recover and reset a password if necessary, with ease.
@@ -11,9 +11,9 @@ Functional Requirement User Stories
 10.
 11.
 12.
-13. As a Supervisor I want the system to require my approval when a lower-level user edits or deleted information.
-14. As a Patient I want the system to connect to my Physician/Psychiastrist.
-15. As a Healthcare Provider/Physician I want the system to drop-down a list for certain information shared by multiple patients.
+13.
+14.
+15.
 
 Non-Functional Requirement User Stories
 1. As a Patient/Physician I want to be able to easily navigate and understand the software.
