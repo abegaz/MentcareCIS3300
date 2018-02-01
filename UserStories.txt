@@ -11,9 +11,9 @@ Functional Requirement User Stories
 10. As a Physician I want to have the ability to add new patients to the system.
 11.
 12.
-13.
-14.
-15.
+13. As a Supervisor I want the system to require my approval when a lower-level user edits or deleted information.
+14. As a Patient I want the system to connect to my Physician/Psychiastrist.
+15. As a Healthcare Provider/Physician I want the system to drop-down a list for certain information shared by multiple patients.
 
 Non-Functional Requirement User Stories
 1. As a Patient/Physician I want to be able to easily navigate and understand the software.
