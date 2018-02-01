@@ -1,7 +1,7 @@
 Functional Requirement User Stories
-1.As a Physician/Patient I would like the ability to easily update/modify patient information.
-2.As a Patient/Physician I would like to be able to backup all my data automatically.
-3.As a Physician I would like to have seoerate authorization levels for different users to protect people's privacy.
+1. As a Physician/Patient I would like the ability to easily update/modify patient information.
+2. As a Patient/Physician I would like to be able to backup all my data automatically.
+3. As a Physician I would like to have seoerate authorization levels for different users to protect people's privacy.
 4. As a Healthcare Provider/Physician I would like easy transferbility of raw medical record data into medical forms and a system-wide datsbase.
 5. As a Patient/Physician I want the system to have a portal for patients and doctors alike to be able to provide feedback on pitfalls and praises of the system.
 6. As a Patient/Physician I want the system to have the ability to recover and reset a password if necessary, with ease.
