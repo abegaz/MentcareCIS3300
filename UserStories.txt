@@ -5,10 +5,10 @@ Functional Requirement User Stories
 4. As a Healthcare Provider/Physician I would like easy transferbility of raw medical record data into medical forms and a system-wide datsbase.
 5. As a Patient/Physician I want the system to have a portal for patients and doctors alike to be able to provide feedback on pitfalls and praises of the system.
 6. As a Patient/Physician I want the system to have the ability to recover and reset a password if necessary, with ease.
-7.
-8.
-9.
-10.
+7. As a Physician I want to have he ability to access and share previous patient records.
+8. As a Physician I want the insurance that all patient information complies with HIPAA guidelines.
+9. As a Patient/Physician I want to be alerted when a speific medical treatment is required for any patient.
+10. As a Physician I want to have the ability to add new patients to the system.
 11.
 12.
 13.
