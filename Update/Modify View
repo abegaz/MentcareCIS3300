@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="4.0" prefHeight="800.0" prefWidth="400.0">
+         <children>
+            <TextField layoutX="8.0" layoutY="53.0" promptText="First Name" />
+            <TextField layoutX="164.0" layoutY="53.0" promptText="Last Name" />
+            <TextField layoutX="8.0" layoutY="90.0" prefHeight="25.0" prefWidth="179.0" promptText="Street Address" />
+            <TextField layoutX="189.0" layoutY="90.0" prefHeight="25.0" prefWidth="84.0" promptText="City" />
+            <TextField layoutX="280.0" layoutY="90.0" prefHeight="25.0" prefWidth="84.0" promptText="State" />
+            <TextField layoutX="8.0" layoutY="128.0" prefHeight="25.0" prefWidth="56.0" promptText="Age" />
+            <TextField layoutX="8.0" layoutY="163.0" prefHeight="25.0" prefWidth="56.0" promptText="Height" />
+            <TextField layoutX="8.0" layoutY="199.0" prefHeight="25.0" prefWidth="56.0" promptText="Weight" />
+            <TextField layoutX="83.0" layoutY="128.0" prefHeight="25.0" prefWidth="65.0" promptText="Gender" />
+            <TextField layoutX="8.0" layoutY="239.0" prefHeight="25.0" prefWidth="179.0" promptText="Arrival Date MM/DD/YYYY" />
+            <TextField layoutX="8.0" layoutY="275.0" prefHeight="25.0" prefWidth="179.0" promptText="Expected Outtake MM/DD/YYYY" />
+            <TextField alignment="TOP_LEFT" layoutX="8.0" layoutY="330.0" prefHeight="191.0" prefWidth="390.0" promptText="Treatment provided by Doctor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField alignment="TOP_LEFT" layoutX="8.0" layoutY="714.0" prefHeight="25.0" prefWidth="179.0" promptText="Doctor ID" />
+            <TextField alignment="TOP_LEFT" layoutX="8.0" layoutY="628.0" prefHeight="68.0" prefWidth="390.0" promptText="Prescriptions">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField alignment="TOP_LEFT" layoutX="8.0" layoutY="548.0" prefHeight="59.0" prefWidth="390.0" promptText="Allergies">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField alignment="TOP_LEFT" layoutX="200.0" layoutY="714.0" prefHeight="25.0" prefWidth="179.0" promptText="Consultation Location" />
+            <Button layoutX="145.0" layoutY="753.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Submit Update" />
+         </children></AnchorPane>
+      <TextArea accessibleRole="TEXT" cache="true" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="407.0" text="         Update Patient Information" wrapText="true">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>
