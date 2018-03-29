@@ -1,0 +1,25 @@
+public class PollController {
+	//These instance variables are used to create new poll objects
+    @FXML private TextField Fname;
+    @FXML private TextField Lname;
+    @FXML private TextField Astreet;
+    @FXML private TextField Acity;
+    @FXML private TextField Astate;
+    @FXML private TextField Azipcode;
+    @FXML private TextField Bdate;
+    @FXML private TextField Height;
+    @FXML private TextField Gender;
+    @FXML private TextField Weight;
+    @FXML private TextField Adate;
+    @FXML private TextField Edate;
+    @FXML private TextField Treatment;
+    @FXML private TextField Doctor;
+    @FXML private TextField Mprescribed;
+    @FXML private TextField Mlocation;
+    @FXML private Button Register;
+    @FXML private TextField Allergies; // Need to update, changed to TEXTBOXES
+
+    public void AddNew()
+    {
+
+    }
