@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.4.14
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2018 at 10:57 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Generation Time: Apr 10, 2018 at 04:27 PM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,11 +23,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctorid`
+-- Table structure for table `doctor`
 --
 
-CREATE TABLE `doctorid` (
-  `DoctorNo` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `doctor` (
+  `DoctorId` int(11) NOT NULL,
   `FirstName` varchar(20) NOT NULL,
   `LastName` varchar(20) NOT NULL,
   `LocationNo` int(11) NOT NULL,
@@ -39,11 +37,11 @@ CREATE TABLE `doctorid` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `locationid`
+-- Table structure for table `location`
 --
 
-CREATE TABLE `locationid` (
-  `LocationNo` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `location` (
+  `LocationID` int(11) NOT NULL,
   `StreetAddress` varchar(50) NOT NULL,
   `City` varchar(20) NOT NULL,
   `State` varchar(3) NOT NULL
@@ -52,11 +50,11 @@ CREATE TABLE `locationid` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `medicineid`
+-- Table structure for table `medicine`
 --
 
-CREATE TABLE `medicineid` (
-  `MedicineNo` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `medicine` (
+  `MedicineId` int(11) NOT NULL,
   `SerialNo` int(11) NOT NULL,
   `MedicineName` int(11) NOT NULL,
   `SupplyAvailable` int(11) NOT NULL,
@@ -66,11 +64,11 @@ CREATE TABLE `medicineid` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patientid`
+-- Table structure for table `patient`
 --
 
-CREATE TABLE `patientid` (
-  `PatientNo` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `patient` (
+  `PatientId` int(11) NOT NULL,
   `FirstName` varchar(20) NOT NULL,
   `LastName` varchar(20) NOT NULL,
   `StreetAddress` varchar(30) NOT NULL,
@@ -93,36 +91,36 @@ CREATE TABLE `patientid` (
 --
 
 --
--- Indexes for table `doctorid`
+-- Indexes for table `doctor`
 --
-ALTER TABLE `doctorid`
-  ADD PRIMARY KEY (`DoctorNo`),
-  ADD KEY `DoctorNo` (`DoctorNo`),
+ALTER TABLE `doctor`
+  ADD PRIMARY KEY (`DoctorId`),
+  ADD KEY `DoctorNo` (`DoctorId`),
   ADD KEY `LocationNo` (`LocationNo`);
 
 --
--- Indexes for table `locationid`
+-- Indexes for table `location`
 --
-ALTER TABLE `locationid`
-  ADD PRIMARY KEY (`LocationNo`),
-  ADD KEY `LocationNo` (`LocationNo`);
+ALTER TABLE `location`
+  ADD PRIMARY KEY (`LocationID`),
+  ADD KEY `LocationNo` (`LocationID`);
 
 --
--- Indexes for table `medicineid`
+-- Indexes for table `medicine`
 --
-ALTER TABLE `medicineid`
-  ADD PRIMARY KEY (`MedicineNo`),
-  ADD KEY `MedicineNo` (`MedicineNo`),
-  ADD KEY `MedicineNo_2` (`MedicineNo`);
+ALTER TABLE `medicine`
+  ADD PRIMARY KEY (`MedicineId`),
+  ADD KEY `MedicineNo` (`MedicineId`),
+  ADD KEY `MedicineNo_2` (`MedicineId`);
 
 --
--- Indexes for table `patientid`
+-- Indexes for table `patient`
 --
-ALTER TABLE `patientid`
-  ADD PRIMARY KEY (`PatientNo`),
+ALTER TABLE `patient`
+  ADD PRIMARY KEY (`PatientId`),
   ADD KEY `MeetingLocation` (`MeetingLocation`),
   ADD KEY `DoctorNo` (`DoctorNo`),
-  ADD KEY `PatientNo` (`PatientNo`),
+  ADD KEY `PatientNo` (`PatientId`),
   ADD KEY `MedicinePrescribed` (`MedicinePrescribed`);
 
 --
@@ -130,52 +128,47 @@ ALTER TABLE `patientid`
 --
 
 --
--- AUTO_INCREMENT for table `doctorid`
+-- AUTO_INCREMENT for table `doctor`
 --
-ALTER TABLE `doctorid`
-  MODIFY `DoctorNo` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `doctor`
+  MODIFY `DoctorId` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `locationid`
+-- AUTO_INCREMENT for table `location`
 --
-ALTER TABLE `locationid`
-  MODIFY `LocationNo` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `location`
+  MODIFY `LocationID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `medicineid`
+-- AUTO_INCREMENT for table `medicine`
 --
-ALTER TABLE `medicineid`
-  MODIFY `MedicineNo` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `medicine`
+  MODIFY `MedicineId` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `patientid`
+-- AUTO_INCREMENT for table `patient`
 --
-ALTER TABLE `patientid`
-  MODIFY `PatientNo` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `patient`
+  MODIFY `PatientId` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `doctorid`
+-- Constraints for table `doctor`
 --
-ALTER TABLE `doctorid`
-  ADD CONSTRAINT `doctorid_ibfk_1` FOREIGN KEY (`LocationNo`) REFERENCES `locationid` (`LocationNo`),
-  ADD CONSTRAINT `doctorid_ibfk_2` FOREIGN KEY (`DoctorNo`) REFERENCES `patientid` (`DoctorNo`);
+ALTER TABLE `doctor`
+  ADD CONSTRAINT `doctor_ibfk_1` FOREIGN KEY (`LocationNo`) REFERENCES `location` (`LocationID`),
+  ADD CONSTRAINT `doctor_ibfk_2` FOREIGN KEY (`DoctorId`) REFERENCES `patient` (`DoctorNo`);
 
 --
--- Constraints for table `locationid`
+-- Constraints for table `location`
 --
-ALTER TABLE `locationid`
-  ADD CONSTRAINT `locationid_ibfk_1` FOREIGN KEY (`LocationNo`) REFERENCES `patientid` (`MeetingLocation`);
+ALTER TABLE `location`
+  ADD CONSTRAINT `location_ibfk_1` FOREIGN KEY (`LocationID`) REFERENCES `patient` (`MeetingLocation`);
 
 --
--- Constraints for table `medicineid`
+-- Constraints for table `medicine`
 --
-ALTER TABLE `medicineid`
-  ADD CONSTRAINT `medicineid_ibfk_1` FOREIGN KEY (`MedicineNo`) REFERENCES `patientid` (`MedicinePrescribed`);
-COMMIT;
+ALTER TABLE `medicine`
+  ADD CONSTRAINT `medicine_ibfk_1` FOREIGN KEY (`MedicineId`) REFERENCES `patient` (`MedicinePrescribed`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
