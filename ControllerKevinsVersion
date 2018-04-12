@@ -12,6 +12,7 @@ import mentcare.model.PatientModel;
 
 public class PatientController {
 	//These instance variables are used to create new poll objects
+	@FXML private TextField PatientId;
     @FXML private TextField FirstName;
     @FXML private TextField LastName;
     @FXML private TextField StreetAddress;
@@ -24,17 +25,18 @@ public class PatientController {
     @FXML private TextField ArrivalDate;
     @FXML private TextField ExpectedOuttakeDate;
     @FXML private TextField Treatment;
-    @FXML private TextField DoctorID;
+    @FXML private TextField DoctorNo;
     @FXML private TextField MedicinePrescribed;
     @FXML private TextField MeetingLocation;
    // @FXML private Button Register;
-    @FXML private TextField Allergies; // Need to update, changed to TEXTBOXES
+
 
     public void touchRegister()
     {
 
 		  System.out.println("Hello wolrsdsdfdsf");
-        PatientModel patientmodel = new PatientModel(FirstName.getText(),
+        PatientModel patientmodel = new PatientModel(PatientId.getText(),
+        		FirstName.getText(),
         		LastName.getText(),
         		StreetAddress.getText(),
         		City.getText(),
@@ -46,22 +48,20 @@ public class PatientController {
         ArrivalDate.getText(),
         ExpectedOuttakeDate.getText(),
         Treatment.getText(),
-        DoctorID.getText(),
+        DoctorNo.getText(),
         MedicinePrescribed.getText(),
-        MeetingLocation.getText(),
-        Allergies.getText(), null);
+        MeetingLocation.getText());
 
-        System.out.println(patientmodel.toString());
-
-        String query = "insert into poll " + "(FirstName, LastName, StreetAddress, City, State, Age, Bdate, Height, Gender, Weight, ArrivalDate, ExpectedOuttakeDate, Treatment, DoctorID, MedicinePrescribed, MeetingLocation, Allergies)"
+        String query = "insert into poll " + "(PatientId, FirstName, LastName, StreetAddress, City, State, Age, Height, Gender, Weight, ArrivalDate, ExpectedOuttakeDate, Treatment, DoctorNo, MedicinePrescribed, MeetingLocation)"
 				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		try (Connection conn = DatabaseConfig.getConnection();
 				PreparedStatement insertpoll = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);) {
 
-			insertpoll.setString(1, patientmodel.getFirstName());
-			insertpoll.setString(2, patientmodel.getLastName());
-			insertpoll.setString(3, patientmodel.getStreetAddress());
+			insertpoll.setString(1, patientmodel.getPatientId());
+			insertpoll.setString(2, patientmodel.getFirstName());
+			insertpoll.setString(3, patientmodel.getLastName());
+			insertpoll.setString(4, patientmodel.getStreetAddress());
 			insertpoll.setString(4, patientmodel.getCity());
 			insertpoll.setString(5, patientmodel.getState());
 			insertpoll.setString(6, patientmodel.getAge());
@@ -71,15 +71,16 @@ public class PatientController {
 			insertpoll.setString(11, patientmodel.getArrivalDate());
 			insertpoll.setString(12, patientmodel.getExpectedOuttakeDate());
 			insertpoll.setString(13, patientmodel.getTreatment());
-			insertpoll.setString(14, patientmodel.getDoctorID());
+			insertpoll.setString(14, patientmodel.getDoctorNo());
 			insertpoll.setString(15, patientmodel.getMedicinePrescribed());
 			insertpoll.setString(16, patientmodel.getMeetingLocation());
-			insertpoll.setString(17, patientmodel.getAllergies());
+
 			// get the number of return rows
 			int affectedRow = insertpoll.executeUpdate();
 
 			if (affectedRow == 1) {
 				System.out.println("Operation is successful");
+				PatientId.setText("");
 				FirstName.setText("");
 				LastName.setText("");
 				StreetAddress.setText("");
@@ -92,10 +93,10 @@ public class PatientController {
 				ArrivalDate.setText("");
 				ExpectedOuttakeDate.setText("");
 				Treatment.setText("");
-				DoctorID.setText("");
+				DoctorNo.setText("");
 				MedicinePrescribed.setText("");
 				MeetingLocation.setText("");
-				Allergies.setText("");
+
 
 			}
 
