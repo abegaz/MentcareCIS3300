@@ -3,7 +3,7 @@ package mentcare.model;
 public class PatientModel {
 public PatientModel(String firstName, String lastName, String streetAdress, String city, String state, String age,
 			String height, String weight, String arrivalDate, String expectedOuttakeDate, String treatment,
-			String doctorID, String medicinePrescribed, String meetingLocation) {
+			String doctorID, String medicinePrescribed, String meetingLocation, String string, String string2) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -134,7 +134,11 @@ public String getGender() {
 	// TODO Auto-generated method stub
 	return null;
 }
-public String getAllergies() {
+public String getDoctorNo() {
+	// TODO Auto-generated method stub
+	return null;
+}
+public String getPatientId() {
 	// TODO Auto-generated method stub
 	return null;
 }
