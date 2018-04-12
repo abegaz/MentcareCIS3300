@@ -1,0 +1,109 @@
+package mentcare.controller;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+import application.DatabaseConfig;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+//import PatientModel.Java;
+import mentcare.model.PatientModel;
+
+public class PatientController {
+	//These instance variables are used to create new poll objects
+    @FXML private TextField FirstName;
+    @FXML private TextField LastName;
+    @FXML private TextField StreetAddress;
+    @FXML private TextField City;
+    @FXML private TextField State;
+    @FXML private TextField Age;
+    @FXML private TextField Height;
+    @FXML private TextField Gender;
+    @FXML private TextField Weight;
+    @FXML private TextField ArrivalDate;
+    @FXML private TextField ExpectedOuttakeDate;
+    @FXML private TextField Treatment;
+    @FXML private TextField DoctorID;
+    @FXML private TextField MedicinePrescribed;
+    @FXML private TextField MeetingLocation;
+   // @FXML private Button Register;
+    @FXML private TextField Allergies; // Need to update, changed to TEXTBOXES
+
+    public void touchRegister()
+    {
+
+		  System.out.println("Hello wolrsdsdfdsf");
+        PatientModel patientmodel = new PatientModel(FirstName.getText(),
+        		LastName.getText(),
+        		StreetAddress.getText(),
+        		City.getText(),
+        		State.getText(),
+        		Age.getText(),
+        Height.getText(),
+        Gender.getText(),
+        Weight.getText(),
+        ArrivalDate.getText(),
+        ExpectedOuttakeDate.getText(),
+        Treatment.getText(),
+        DoctorID.getText(),
+        MedicinePrescribed.getText(),
+        MeetingLocation.getText(),
+        Allergies.getText(), null);
+
+        System.out.println(patientmodel.toString());
+
+        String query = "insert into poll " + "(FirstName, LastName, StreetAddress, City, State, Age, Bdate, Height, Gender, Weight, ArrivalDate, ExpectedOuttakeDate, Treatment, DoctorID, MedicinePrescribed, MeetingLocation, Allergies)"
+				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+		try (Connection conn = DatabaseConfig.getConnection();
+				PreparedStatement insertpoll = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);) {
+
+			insertpoll.setString(1, patientmodel.getFirstName());
+			insertpoll.setString(2, patientmodel.getLastName());
+			insertpoll.setString(3, patientmodel.getStreetAddress());
+			insertpoll.setString(4, patientmodel.getCity());
+			insertpoll.setString(5, patientmodel.getState());
+			insertpoll.setString(6, patientmodel.getAge());
+			insertpoll.setString(8, patientmodel.getHeight());
+			insertpoll.setString(9, patientmodel.getGender());
+			insertpoll.setString(10, patientmodel.getWeight());
+			insertpoll.setString(11, patientmodel.getArrivalDate());
+			insertpoll.setString(12, patientmodel.getExpectedOuttakeDate());
+			insertpoll.setString(13, patientmodel.getTreatment());
+			insertpoll.setString(14, patientmodel.getDoctorID());
+			insertpoll.setString(15, patientmodel.getMedicinePrescribed());
+			insertpoll.setString(16, patientmodel.getMeetingLocation());
+			insertpoll.setString(17, patientmodel.getAllergies());
+			// get the number of return rows
+			int affectedRow = insertpoll.executeUpdate();
+
+			if (affectedRow == 1) {
+				System.out.println("Operation is successful");
+				FirstName.setText("");
+				LastName.setText("");
+				StreetAddress.setText("");
+				City.setText("");
+				State.setText("");
+				Age.setText("");
+				Height.setText("");
+				Gender.setText("");
+				Weight.setText("");
+				ArrivalDate.setText("");
+				ExpectedOuttakeDate.setText("");
+				Treatment.setText("");
+				DoctorID.setText("");
+				MedicinePrescribed.setText("");
+				MeetingLocation.setText("");
+				Allergies.setText("");
+
+			}
+
+		} catch (Exception e) {
+			System.out.println("Status: operation failed due to "+e);
+
+		}
+
+		}
+
+}
