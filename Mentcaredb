@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2018 at 03:50 PM
+-- Generation Time: Apr 19, 2018 at 03:53 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -23,47 +23,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctor`
---
-
-CREATE TABLE IF NOT EXISTS `doctor` (
-  `DoctorId` int(11) NOT NULL,
-  `FirstName` varchar(20) NOT NULL,
-  `LastName` varchar(20) NOT NULL,
-  `LocationNo` int(11) NOT NULL,
-  `Specialty` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `location`
---
-
-CREATE TABLE IF NOT EXISTS `location` (
-  `LocationID` int(11) NOT NULL,
-  `StreetAddress` varchar(50) NOT NULL,
-  `City` varchar(20) NOT NULL,
-  `State` varchar(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `medicine`
---
-
-CREATE TABLE IF NOT EXISTS `medicine` (
-  `MedicineId` int(11) NOT NULL,
-  `SerialNo` int(11) NOT NULL,
-  `MedicineName` int(11) NOT NULL,
-  `SupplyAvailable` int(11) NOT NULL,
-  `StorageLocation` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `patient`
 --
 
@@ -74,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `patient` (
   `StreetAddress` varchar(30) DEFAULT NULL,
   `City` varchar(20) DEFAULT NULL,
   `State` varchar(2) DEFAULT NULL,
-  `Age` int(3) DEFAULT '0',
+  `Age` varchar(3) DEFAULT NULL,
   `Height` varchar(4) DEFAULT '0',
   `Gender` varchar(6) DEFAULT NULL,
   `Weight` varchar(4) DEFAULT '0',
@@ -91,29 +50,6 @@ CREATE TABLE IF NOT EXISTS `patient` (
 --
 
 --
--- Indexes for table `doctor`
---
-ALTER TABLE `doctor`
-  ADD PRIMARY KEY (`DoctorId`),
-  ADD KEY `DoctorNo` (`DoctorId`),
-  ADD KEY `LocationNo` (`LocationNo`);
-
---
--- Indexes for table `location`
---
-ALTER TABLE `location`
-  ADD PRIMARY KEY (`LocationID`),
-  ADD KEY `LocationNo` (`LocationID`);
-
---
--- Indexes for table `medicine`
---
-ALTER TABLE `medicine`
-  ADD PRIMARY KEY (`MedicineId`),
-  ADD KEY `MedicineNo` (`MedicineId`),
-  ADD KEY `MedicineNo_2` (`MedicineId`);
-
---
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
@@ -127,21 +63,6 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for dumped tables
 --
 
---
--- AUTO_INCREMENT for table `doctor`
---
-ALTER TABLE `doctor`
-  MODIFY `DoctorId` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `location`
---
-ALTER TABLE `location`
-  MODIFY `LocationID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `medicine`
---
-ALTER TABLE `medicine`
-  MODIFY `MedicineId` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `patient`
 --
